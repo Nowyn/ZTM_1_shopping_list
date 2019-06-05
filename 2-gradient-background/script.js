@@ -25,18 +25,11 @@ function getRandomColor() {
 }
 
 function setRandomGradient() {
-	body.style.background = 
-	"linear-gradient(to right, " 
-	+ getRandomColor()
-	+ ", "
-	+ getRandomColor()
-	+ ")";
-
-	css.textContent = body.style.background + ";"
+	setGradient(getRandomColor(), getRandomColor());
 }
 
-color1.addEventListener("input", setColors);
+selectedColor1.addEventListener("input", setColors);
 
-color2.addEventListener("input", setColors);
+selectedColor2.addEventListener("input", setColors);
 
 randomButton.addEventListener("click", setRandomGradient);
