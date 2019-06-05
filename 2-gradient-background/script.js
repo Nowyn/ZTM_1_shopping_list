@@ -15,7 +15,7 @@ function setGradient(color1, color2) {
 	css.textContent = body.style.background + ";"
 }
 
-function setColors() {
+function setSelectedColors() {
 	setGradient(selectedColor1.value, selectedColor2.value);
 }
 
@@ -24,12 +24,12 @@ function getRandomColor() {
 	return color;
 }
 
-function setRandomGradient() {
+function setRandomColors() {
 	setGradient(getRandomColor(), getRandomColor());
 }
 
-selectedColor1.addEventListener("input", setColors);
+selectedColor1.addEventListener("input", setSelectedColors);
 
-selectedColor2.addEventListener("input", setColors);
+selectedColor2.addEventListener("input", setSelectedColors);
 
-randomButton.addEventListener("click", setRandomGradient);
+randomButton.addEventListener("click", setRandomColors);
